@@ -1,0 +1,410 @@
+*{
+ margin: 0;
+  padding: 0; 
+}
+
+html{
+  
+  height: 300vh;
+}
+.prop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.prop video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  z-index: 50;
+
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.barra {
+  justify-content: center;
+  position: absolute;
+  top: 50vw;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: rgb(59, 131, 127);
+  z-index: 1;
+  align-items: center;
+}
+
+.titulo-1 {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  position: absolute;
+  font-size: 1.5vw;
+  top: 54vw;
+  z-index: 3;
+}
+.texto-1 {
+  text-align: center;
+  font-size: 1.4vw;
+  top: 65vw;
+  color: white;
+  position: absolute;
+  z-index: 3;
+}
+.fotos-juntas {
+  margin-left: 1%;
+  top: 170%;
+  position: absolute;
+  display: inline-block;
+  z-index: 3;
+}
+.fotos-juntas img {
+  width: 24vw;
+}
+
+.bnt-chat {
+  top: 87%;
+  left: 78%;
+  position: fixed;
+  z-index: 4;
+}
+
+.bnt-chat button {
+  font-family: "Staatliches", cursive;
+  font-size: 1.5vw;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+  width: 20vw;
+  height: 4vw;
+  cursor: pointer;
+}
+
+
+
+nav{
+  display: flex;
+ 
+ margin-top: 20px;
+  height: 8vh;
+
+}
+
+.nav-list{
+  z-index: 20;
+  list-style: none;
+  display: flex;
+}
+a{
+  z-index: 10;
+  transition: 0.3s;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5vw;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.nav-list li{
+  
+  list-style-type: none;
+  border-right: 1px solid black;
+  padding: 2% 20%;
+  letter-spacing: 3px;
+  
+
+}
+.menu-mobile{
+    display: none;
+    cursor: pointer;
+}
+.menu-mobile div{
+
+width: 32px;
+height: 2px;
+background: #000000;
+margin: 8px;
+}
+
+
+
+
+@media (max-width:680px) {
+  html{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+    a{
+      font-size: 2.5vw;
+      z-index: 60;
+      
+    }
+    .nav-list{
+        position: absolute;
+        top: 12%;
+        right: 0;
+        width: 50vw;
+        height: 50vh;
+        background-color: rgb(46, 100, 98);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: 0.3s ease-in;
+        z-index: 20;
+        list-style: none;
+        display: flex;
+        border-radius: 20px;
+    }
+    .nav-list li{
+      border-right: 0 solid black;
+       margin-left: 0;
+       opacity: 0;
+      z-index: 10;
+    }
+    .menu-mobile{
+      position: absolute;
+        display: block;
+        z-index: 10;
+       
+    }
+    .nav-list.active{
+        transform: translateX(0);
+    }
+    nav{
+        margin-left: 80%;
+      z-index: 3;
+    
+    }
+}
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}  
+
+
+@media (max-width: 480px) {
+  html{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+    a {
+      font-size: 4vw;
+      z-index: 60;
+    }
+  
+  
+  
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 70vw; /* Aumentei um pouco a largura para telas menores */
+      height: 50vh;
+      background-color: rgb(255, 255, 255);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: 0.3s ease-in;
+      z-index: 20;
+      list-style: none;
+      display: flex;
+      border-radius: 20px;
+    }
+  
+    .nav-list.active {
+      transform: translateX(0);
+    }
+  
+    .nav-list li {
+      border-right: 0 solid black;
+      margin-left: 0;
+      opacity: 0;
+      z-index: 10;
+      animation: navLinkFade 0.5s ease forwards;
+    }
+  
+    .menu-mobile {
+      position: absolute;
+      display: block;
+    }
+  
+    .prop {
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .prop video {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  
+    .logo {
+      margin-top: 900px; /* Ajuste na margem superior para telas menores */
+      position: absolute;
+    }
+  
+    .titulo-1 {
+      font-size: 2.5vw; /* Ajuste no tamanho da fonte para telas menores */
+      top: 75vw; /* Ajuste na posição para telas menores */
+    }
+  
+    .texto-1 {
+      font-size: 2.4vw; /* Ajuste no tamanho da fonte para telas menores */
+      top: 85vw; /* Ajuste na posição para telas menores */
+    }
+  
+    .fotos-juntas img {
+      width: 22vw; /* Ajuste no tamanho da imagem para telas menores */
+    }
+  
+    .barra {
+      top: 65vw; /* Ajuste na posição para telas menores */
+    }
+  
+    .bnt-chat button {
+      font-size: 2vw; /* Ajuste no tamanho da fonte para telas menores */
+      width: 20vw; /* Ajuste na largura do botão para telas menores */
+      height: 7vw; /* Ajuste na altura do botão para telas menores */
+    }
+  }
+  
+
+@media (max-width: 425px) {
+   html{
+    padding: 0;
+    margin: 0;
+  }
+  a{
+    font-size: 4vw;
+    z-index: 60;
+    
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 70vw; /* Aumentei um pouco a largura para telas menores */
+    height: 50vh;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: 0.3s ease-in;
+    z-index: 20;
+    list-style: none;
+    display: flex;
+    border-radius: 20px;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  .nav-list li {
+    border-right: 0 solid black;
+    margin-left: 0;
+    opacity: 0;
+    z-index: 10;
+    animation: navLinkFade 0.5s ease forwards;
+  }
+
+  .menu-mobile {
+    top: 0;
+    position: absolute;
+    display: block;
+  }
+
+
+  .prop video {
+    
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .logo {
+    margin-top: 900px; /* Ajuste na margem superior para telas menores */
+    position: absolute;
+
+  }
+
+  .titulo-1 {
+    font-size: 2.5vw; /* Ajuste no tamanho da fonte para telas menores */
+    top: 75vw; /* Ajuste na posição para telas menores */
+  }
+
+  .texto-1 {
+    font-size: 2.4vw; /* Ajuste no tamanho da fonte para telas menores */
+    top: 85vw; /* Ajuste na posição para telas menores */
+  }
+
+  .fotos-juntas img {
+    width: 22vw; /* Ajuste no tamanho da imagem para telas menores */
+  }
+
+  .barra {
+    top: 65vw; /* Ajuste na posição para telas menores */
+  }
+
+  .bnt-chat button {
+    font-size: 2vw; /* Ajuste no tamanho da fonte para telas menores */
+    width: 20vw; /* Ajuste na largura do botão para telas menores */
+    height: 7vw; /* Ajuste na altura do botão para telas menores */
+  }
+}
